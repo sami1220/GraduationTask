@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <title>Document</title> -->
+   <title>House Price App</title>
+   <style>
+   #wrapper {
+      text-align: center;
+   }
+   /* .h_title {
+      text-align: left;
+      border-bottom: 2px, black ;
+   } */
+   </style>
+</head>
+<body>
+   <h1 style="text-align: center">マンション 成約価格の予測</h1> 
+      
+   <div id="wrapper">
+   <!-- 都道府県 -->
+   {% for message in form.Prefecture.errors %}
+   <div>{{ message }}</div>
+   {% endfor %}
+   <!-- 市区町村名 -->
+   {% for message in form.CityTown.errors %}
+   <div>{{ message }}</div>
+   {% endfor %}
+   <!-- 地区名 -->
+   {% for message in form.District.errors %}
+   <div>{{ message }}</div>
+   {% endfor %}
+   <!-- 間取り -->
+   {% for message in form.Floor.errors %}
+   <div>{{ message }}</div>
+   {% endfor %}
+   <!-- 面積 -->
+   {% for message in form.Roomsize.errors %}
+   <div>{{ message }}</div>
+   {% endfor %}
+   <!-- 建物の構造 -->
+   {% for message in form.Bldplan.errors %}
+   <div>{{ message }}</div>
+   {% endfor %}
+   <!-- 建築年 -->
+   {% for message in form.BldAge.errors %}
+   <div>{{ message }}</div>
+   {% endfor %}
+      
+   <form method="post">
+   {{ form.Prefecture.label}}<br>
+   {{ form.Prefecture }}
+   <br>
+   {{ form.CityTown.label }}<br>
+   {{ form.CityTown }}
+   <br>
+   {{ form.District.label }}<br>
+   {{ form.District }}
+   <br>
+   {{ form.Floor.label }}<br>
+   {{ form.Floor }}
+   <br>
+   {{ form.Roomsize.label }}<br>
+   {{ form.Roomsize }}
+   <br>
+   {{ form.Bldplan.label }}<br>
+   {{ form.Bldplan }}
+   <br>
+   {{ form.BldAge.label }}<br>
+   {{ form.BldAge }}
+   <br>
+   <br>
+   {{ form.submit }}
+   </form>
+   </div>
+</body>
+</html>
