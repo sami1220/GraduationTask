@@ -66,7 +66,7 @@
 <br>
 　-tw_bot.py …メインの処理　!!このファイルをTwitterBOTとしてデプロイ!!
 <br>
-　-keys.py  … TwitterKeyを保存するため
+　-keys.py  … TwitterKeyを保存するため(APIkeyを記載しているためgithubからは削除済み)
 <br>
 　-model_bot.pth …学習したモデル（Pytorch Seq2Seq）
 <br>
